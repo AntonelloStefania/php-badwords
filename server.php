@@ -2,7 +2,8 @@
 $censored = $_POST['censored'];
 $text_area= $_POST['textarea'];
 $lower_censored = strtolower($censored);
-$text_lower= strtolower($text_area)
+$text_lower= strtolower($text_area);
+$censored_mutliple = explode(" ",$censored);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ $text_lower= strtolower($text_area)
                 </div>
                 <div class="card my-5 p-2" style='background-color:RGBA(124,238,255,0.8);  box-shadow: 0 0 20px 2px black'>
                     <h2 class="text-center fw-bolder">il tuo testo censurato:</h2>
-                    <div class="card py-3 ps-2 mx-3 mb-3"><span class="p-3"><?php echo str_replace($lower_censored,"<span style='background-color:black; color:red;' class='ms-2 w-25 fw-lighter px-1'>CENSORED</span>",$text_lower); ?></span></div>
+                    <div class="card py-3 ps-2 mx-3 mb-3"><span class="p-3"><?php echo str_replace($censored_mutliple,"<span style='background-color:black; color:red;' class='ms-2 w-25 fw-lighter px-1'>CENSORED</span>",$text_lower); ?></span></div>
                 </div>
             </div>
         </div>
