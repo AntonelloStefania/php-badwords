@@ -3,7 +3,7 @@ $censored = $_POST['censored'];
 $text_area= $_POST['textarea'];
 $lower_censored = strtolower($censored);
 $text_lower= strtolower($text_area);
-$censored_mutliple = explode(" ",$censored);
+$censored_mutliple = explode(" ",$lower_censored);
 ?>
 
 <!DOCTYPE html>
